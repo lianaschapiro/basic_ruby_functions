@@ -6,8 +6,18 @@ def American_things
 end
 
 # Create a function to find the maximum value in an array of numbers. For instance: [100,10,-1000] should return 100. 
-def find_max(my_array)
-	puts my_array.max
+def find_max(array)
+	#Start with the first number in the array
+	max = array[0]
+		#Go through each position in the array
+		array.each do |i|
+			#If any numbers are bigger than current max
+			if i > max
+			#Reset the new max to the bigger number
+			max = i
+		end
+	end
+	puts max
 end
 
 # Create a function that takes two arguments - both of them arrays. Inside of the function, combine the arrays using theitems from the first array as keys and the second array as values into a hash. For example, when these two arrays aresupplied as arguments:
